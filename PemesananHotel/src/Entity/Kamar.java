@@ -4,52 +4,58 @@ package Entity;
  * @author gustavian
  */
 public class Kamar {
-    String noKamar;
-    int jenisKamar;
-    String seat;
-    float hrgKamar;
+    private String kode_kamar, jenis_kamar, tipe_kamar , tahun;
+    private int jumlah;
+    
+    public Kamar(String kode_kamar, String jenis_kamar, String tipe_kamar, String tahun, int jumlah){
+        this.kode_kamar = kode_kamar;
+        this.jenis_kamar = jenis_kamar;
+        this.tipe_kamar = tipe_kamar;
+        this.tahun = tahun;
+        this.jumlah=jumlah;
+    }
+
+    public void setKode_kamar(String kode_kamar) {
+        this.kode_kamar = kode_kamar;
+    }
+
+    public void setJenis_kamar(String jenis_kamar) {
+        this.jenis_kamar = jenis_kamar;
+    }
+
+    public void setTipe_kamar(String tipe_kamar) {
+        this.tipe_kamar = tipe_kamar;
+    }
+
+    public void setTahun(String tahun) {
+        this.tahun = tahun;
+    }
+
+    public void setJumlah(int jumlah) {
+        this.jumlah = jumlah;
+    }
     
     public Kamar(){
-        
+    
     }
     
-    public Kamar(String noKamar, int jenisKamar, String seat, float hrgKamar){
-        this.noKamar = noKamar;
-        this.jenisKamar = jenisKamar;
-        this.seat = seat;
-        this.hrgKamar = hrgKamar;
+    public String getKodeKamar(){
+        return this.kode_kamar;
     }
-
-    public String getNoKamar() {
-        return noKamar;
+    
+   public String getJenis(){
+        return this.jenis_kamar;
     }
-
-    public void setNoKamar(String noKamar) {
-        this.noKamar = noKamar;
+    
+    public String getTipe(){
+        return this.tipe_kamar;
     }
-
-    public int getJenisKamar() {
-        return jenisKamar;
+    
+    public String getTahun(){
+        return this.tahun;
     }
-
-    public void setJenisKamar(int jenisKamar) {
-        this.jenisKamar = jenisKamar;
+    
+    public int getJumlah(){
+        return this.jumlah;
     }
-
-    public String getSeat() {
-        return seat;
-    }
-
-    public void setSeat(String seat) {
-        this.seat = seat;
-    }
-
-    public float getHrgKamar() {
-        return hrgKamar;
-    }
-
-    public void setHrgKamar(float hrgKamar) {
-        this.hrgKamar = hrgKamar;
-    }
-
 }

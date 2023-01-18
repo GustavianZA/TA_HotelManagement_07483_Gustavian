@@ -3,82 +3,50 @@ package Entity;
  *
  * @author gustavian
  */
-public class Manusia {
-    String nik;
-    String nama;
-    String user;
-    String pass;
-    String alamat;
-    String noTelp;
-    String email;
+public class Manusia extends Customer{
+     protected String no_telp;
+    
+    public Manusia(String no_id, String nama, String alamat, String no_telp){
+        super(no_id, nama, alamat);
+        this.no_telp = no_telp;
+    }
     
     public Manusia(){
         
     }
+
+    @Override 
+    public String getNo_id(){
+        return no_id;
+    }
     
-    public Manusia(String nik, String nama, String user, String pass, String alamat, String noTelp, String email){
-        this.nik = nik;
-        this.nama = nama;
-        this.user = user;
-        this.pass = pass;
-        this.alamat = alamat;
-        this.noTelp = noTelp;
-        this.email = email;
-    }
-
-    public String getNik() {
-        return nik;
-    }
-
-    public void setNik(String nik) {
-        this.nik = nik;
-    }
-
-    public String getNama() {
+    @Override 
+    public String getNama(){
         return nama;
     }
+    
+    @Override 
+    public String getAlamat(){
+        return alamat;
+    }
+    
+    public String getNo_Telp(){
+        return this.no_telp;
+    }
 
+    @Override
+    public void setNo_id(String no_id) {
+        this.no_id = no_id;
+    }
+    @Override
     public void setNama(String nama) {
         this.nama = nama;
     }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-    
-    public String getPass() {
-        return pass;
-    }
-    
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-    public String getAlamat() {
-        return alamat;
-    }
-
+    @Override
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
-
-    public String getNoTelp() {
-        return noTelp;
+        public void setNo_telp(String no_telp) {
+        this.no_telp = no_telp;
     }
-
-    public void setNoTelp(String noTelp) {
-        this.noTelp = noTelp;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }  
 }
