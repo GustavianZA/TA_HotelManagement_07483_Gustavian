@@ -7,7 +7,7 @@ import Controller.*;
  */
 public class allobjcontroller {
     public static ManusiaController manusia = new ManusiaController();
-    public static KamarController buku = new KamarController();
+    public static KamarController kamar = new KamarController();
     public static StaffController staff = new StaffController();
     public static ReservasiController reservasi = new ReservasiController();
 }
